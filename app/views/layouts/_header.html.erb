@@ -17,7 +17,7 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
         <% if user_signed_in? %>
-            <%= link_to new_pin_path do %>
+          <li><%= link_to new_pin_path do %>
               <span class="glyphicon glyphicon-plus"></span> New Pin
             <% end %>   
           </li>
