@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   	@user = User.all
   end
 
-  def product
+  def thankyou
   end
 end

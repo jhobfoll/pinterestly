@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     if origin_path.present?
       origin_path
     else
-      params[:target].presence || product_path
+      params[:target].presence || thankyou_path
     end
   end
 
@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def store_origin_path
-    session[:origin_path] = product_path
+    session[:origin_path] = thankyou_path
   end
 
   def clear_origin_path
