@@ -2,8 +2,10 @@ Pinterestly::Application.routes.draw do
   resources :pins
 
   devise_for :users
-  root "pins#index"
-  get "about" => "pages#about"
+  devise_scope :user do
+    root :to => 'devise/registrations#new'
+  end
+  get "users" => "pages#users"
   get "product" => "pages#product"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
