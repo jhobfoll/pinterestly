@@ -1,13 +1,23 @@
-Pinterestly::Application.routes.draw do
-  resources :pins
-
+SimplyElectricity::Application.routes.draw do
+  
   devise_for :users
-  devise_scope :user do
-    root :to => 'devise/registrations#new'
+   
+  resources :users, except: [:new, :create]
+  
+  authenticated :user do
+    root :to => 'pages#thankyou', as: :authenticated_root
   end
-  get "users" => "pages#users"
+  
+  get "zip_submission" => "pages#zip_submission", as: :zip_submission
+  
+  root :to => 'pages#home', as: :root
+
   get "thankyou" => "pages#thankyou"
-  # The priority is based upon order of creation: first created -> highest priority.
+  
+  # get "users" => "pages#users"
+  # resources :pins
+  
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

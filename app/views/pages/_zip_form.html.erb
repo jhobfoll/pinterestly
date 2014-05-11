@@ -1,0 +1,9 @@
+	<div>
+		<%= form_tag zip_submission_path, :method => :get do %>
+	
+	      <%= label_tag :zip %>
+	      <%= text_field_tag :zip, params[:zip] %>
+	
+	      <%= submit_tag "Submit", class: "btn btn-large btn-primary" %>
+	    <% end %>
+	</div>
