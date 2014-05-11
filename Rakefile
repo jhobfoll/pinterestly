@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Pinterestly::Application.load_tasks
+SimplyElectricity::Application.load_tasks

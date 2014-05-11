@@ -1,0 +1,34 @@
+<%= form_for(@user, html: {class: 'form-horizontal'}) do |f| %>
+	<div class="form-group">
+
+		<%= f.label :email %>
+		<%= f.email_field :email, class: "form-control" %><br />
+	      
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name, class: "form-control" %><br />
+		  
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name, class: "form-control" %><br />
+		  
+		<%= f.label :phone %>
+		<%= f.phone_field :phone, class: "form-control" %><br />
+		  
+		<%= f.label :address_1 %>
+		<%= f.text_field :address_1, class: "form-control" %><br />
+		
+		<%= f.label :address_2 %>
+		<%= f.text_field :address_2, class: "form-control" %><br />
+		
+		<% if @user.zip.present? %>
+	 		<strong><%= @user.zip.city %>, <%= @user.zip.state %>  <%= @user.zip.zip %></strong><br /><br />
+	 	<% end %>
+	 			
+		<div class="actions">
+		<%= f.submit %>
+		</div>
+		
+	</div>
+
+<% end %>
+ 
+

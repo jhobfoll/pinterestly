@@ -16,3 +16,6 @@
 /tmp
 .DS_store
 /public/system/*
+
+# Ignore Aptana's .project file.
+/.project

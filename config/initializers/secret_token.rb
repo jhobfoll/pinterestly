@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Pinterestly::Application.config.secret_key_base = '0c6f2b9a60b430082b34a21757a7aa1a44cb624a6217ebc5605dc7346fc5249bb16f91cfeb945f3ce01de320897c5d9645e4935e04b1f198fb6c9f4ca08e6f71'
+SimplyElectricity::Application.config.secret_key_base = '0c6f2b9a60b430082b34a21757a7aa1a44cb624a6217ebc5605dc7346fc5249bb16f91cfeb945f3ce01de320897c5d9645e4935e04b1f198fb6c9f4ca08e6f71'
